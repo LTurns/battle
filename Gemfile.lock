@@ -39,6 +39,7 @@ GEM
       rspec-support (~> 3.9.0)
     rspec-support (3.9.2)
     ruby2_keywords (0.0.2)
+    session (3.2.0)
     sinatra (2.0.8.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -54,7 +55,8 @@ PLATFORMS
 DEPENDENCIES
   capybara
   rspec
+  session
   sinatra
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
