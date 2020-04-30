@@ -9,11 +9,13 @@ feature 'Form input' do
     expect(page).to have_content "John vs Jane"
   end
 end
-
-feature 'Player 2 Score' do
-  scenario 'Player 1 can see Player 2 Hit Points' do
-    visit('/points')
-    # click_button 'Hit_Points'
-    expect(page).to have_content "Hitpoints: 5"
+#
+  feature 'View hit points' do
+  scenario 'see Player 2 hit points' do
+    visit('/form')
+    fill_in :player_1, with: 'John'
+    fill_in :player_2, with: 'Jane'
+    click_button 'Submit'
+    expect(page).to have_content 'Jane: 60HP'
   end
 end

@@ -22,11 +22,5 @@ class Battle < Sinatra::Base
     @player_1 = session[:player_1]
     @player_2 = session[:player_2]
     erb :play
-    # "Hitpoints: 5"
   end
-
-  get "/points" do
-    "Hitpoints: 5"
-  end
-
 end
