@@ -1,2 +1,12 @@
-<h1><%= @player_1.name %> attacked <%= @player_2.name %></h1>
-<h2><%= @player_2.name %>: <%= @player_2.hp %>HP</h2>
+<%= if %> @game.turn == game.player_1
+<h1><%= @game.player_1.name %> attacked <%= @game.player_2.name %></h1>
+<h2><%= @game.player_2.name %>: <%= @game.player_2.hp %>HP</h2>
+<%= else %>
+<h1><%= @game.player_2.name %> attacked <%= @game.player_1.name %></h1>
+<h2><%= @game.player_1.name %>: <%= @game.player_1.hp %>HP</h2>
+<%= end %>
+
+
+<form action="/play" method="get">
+<input type="submit" value="Next Player">
+</form>

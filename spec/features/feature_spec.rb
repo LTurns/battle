@@ -29,3 +29,12 @@ feature 'reduce Player 2s HP by 10' do
       expect(page).to have_content 'Jane: 50HP'
     end
   end
+
+  feature 'switch turns' do
+    scenario 'change from player_1 to player 2' do
+      sign_in_and_play
+      click_button 'Attack'
+      click_button 'Next Player'
+      expect(page).to have_content("Turn: Lizzie")
+    end
+  end 
